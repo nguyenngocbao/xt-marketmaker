@@ -26,7 +26,7 @@ public class XtService {
     public static boolean accountSell = false;
     public static double  prevPrice = 0;
     public static double  maxPrice = 0.0030;
-    public static double  minPrice = 0.002;
+    public static double  minPrice = 0.001;
 
 
     @Autowired
@@ -44,6 +44,9 @@ public class XtService {
                 return;
             }
             double price = randomPrice();
+            if (price < minPrice || price > maxPrice){
+                return;
+            }
             sell(price);
             Thread.sleep(1000);
             buy(price);
@@ -136,7 +139,8 @@ public class XtService {
             dexPrice = 0;
         }
         if (dexPrice < minPrice){
-            dexPrice = lowerBound + (upperBound - lowerBound) * random.nextDouble();
+            //dexPrice = lowerBound + (upperBound - lowerBound) * random.nextDouble();
+            dexPrice = 0;
         }
 
         return Math.round(dexPrice * 1000000.0) / 1000000.0;
