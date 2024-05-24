@@ -44,6 +44,7 @@ public class XtService {
                 return;
             }
             double price = randomPrice();
+            System.out.println("price===="+ price);
             if (price < minPrice || price > maxPrice){
                 return;
             }
