@@ -1,0 +1,21 @@
+spring:
+  profiles:
+    active: dev
+
+logging.level:
+  root: INFO
+  liquibase: INFO
+
+springdoc:
+  api-docs:
+    path: /retrocraft
+  swagger-ui:
+    path: /retrocraft/swagger-ui-custom.html
+server:
+  forward-headers-strategy: framework
+
+xt:
+  appKey1: 54c94fab-2384-402b-a173-52326978f418
+  appKey2: 607f96d0-37f3-4b6e-81de-7e10c779ab72
+  privateKey1: ec72403fd609fd15449b0ae41258492a3e03ddcc
+  privateKey2: 1026e8904aa5381cfd9884d429f51b658fe2f27b

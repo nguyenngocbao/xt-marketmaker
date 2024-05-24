@@ -1,0 +1,39 @@
+spring:
+  datasource:
+    url: jdbc:mysql://103.245.237.45:3306/taplink_menu_api
+    username: taplink_menu_api
+    password: Taplink@123
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        format_sql: true
+        show-sql: true
+    hibernate:
+      ddl-auto: update
+
+  mail:
+    default-encoding: UTF-8
+    host: smtp.gmail.com
+    username: lmthong98@gmail.com
+    password: pvxspejbhvqiaoso
+    properties:
+      mail:
+        debug: true
+        transport:
+          protocol: smtp
+        smtp:
+          port: 587
+          auth: true
+          starttls:
+            enable: true
+            required: true
+
+
+minio:
+  endpoint: https://minio.taplink.network/
+  credentials:
+    access-key: 9XWopUKy0LguxwT7O9DR
+    secret-key: TpZ6Kn02ft1i5C7FiOPbQrzZopqzqUL8B1cJIVgD
+  bucket-name: testmenu
+

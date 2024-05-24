@@ -1,0 +1,17 @@
+version: "3"
+services:
+  web:
+    build: .
+    ports:
+      - "8181:8080"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://103.245.237.45:3306/taplink_menu_api
+      - SPRING_DATASOURCE_USERNAME=taplink_menu_api
+      - SPRING_DATASOURCE_PASSWORD=Taplink@123
+      - SPRING_JPA_HIBERNATE_DIALECT=org.hibernate.dialect.MySQL8Dialect
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=none
+      - SPRING_JPA_SHOW_SQL=false
+      - SPRING_PROFILES_ACTIVE=prod
+      - SPRING_MAIL_HOST=smtp.gmail.com
+      - SPRING_MAIL_USERNAME=lmthong98@gmail.com
+      - SPRING_MAIL_PASSWORD=pvxspejbhvqiaoso
