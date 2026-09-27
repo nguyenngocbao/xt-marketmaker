@@ -1,0 +1,10 @@
+services:
+  xt-marketmaker:
+    build: .
+    image: xt-marketmakeratest
+    container_name: xt-marketmaker
+    restart: unless-stopped
+    env_file: .env
+    ports:
+      # Chỉ mở trên localhost; nginx trên host proxy vào đây
+      - "127.0.0.1:${HOST_PORT:-8182}:8080"
